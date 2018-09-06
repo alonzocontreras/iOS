@@ -28,24 +28,24 @@ The following **additional** user stories are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. 3rd party libraries
+2. different screen size adjustments
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/zD8oPtQ.gif' title='Flix App' width='' alt='Flix App' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I found trying to get the refreshing animation show on the entire screen a little bit more challenging than anticipated. I must use 3rd party libraries in order to achive this in which I will return in a later date to complete it.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [Alonzo Contreras]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

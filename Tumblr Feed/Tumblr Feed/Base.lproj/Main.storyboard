@@ -29,6 +29,7 @@
                     </view>
                     <connections>
                         <outlet property="UITableView" destination="8bC-Xf-vdC" id="fcM-OI-4JI"/>
+                        <outlet property="tableView" destination="dL7-bN-dt5" id="EBw-en-Bjy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

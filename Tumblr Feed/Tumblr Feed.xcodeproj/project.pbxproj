@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5269CB2721421163005432DB /* PhotoCel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269CB2621421163005432DB /* PhotoCel.swift */; };
 		52B232FF21378E5800AF790A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B232FE21378E5800AF790A /* AppDelegate.swift */; };
 		52B2330421378E5800AF790A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B2330221378E5800AF790A /* Main.storyboard */; };
 		52B2330621378E5900AF790A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B2330521378E5900AF790A /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0F12563643FCF48017196C9E /* Pods-Tumblr FeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumblr FeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumblr FeedUITests/Pods-Tumblr FeedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		39EF04F30FB2988906289F4F /* Pods_Tumblr_Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tumblr_Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5269CB2621421163005432DB /* PhotoCel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCel.swift; sourceTree = "<group>"; };
 		52B232FB21378E5800AF790A /* Tumblr Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tumblr Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B232FE21378E5800AF790A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B2330321378E5800AF790A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				52B2330721378E5900AF790A /* LaunchScreen.storyboard */,
 				52B2330A21378E5900AF790A /* Info.plist */,
 				52F14F1B21378F0F0099E456 /* PhotosViewController.swift */,
+				5269CB2621421163005432DB /* PhotoCel.swift */,
 			);
 			path = "Tumblr Feed";
 			sourceTree = "<group>";
@@ -301,15 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Tumblr Feed-checkManifestLockResult.txt",
 			);
@@ -323,16 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tumblr Feed/Pods-Tumblr Feed-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
@@ -347,15 +342,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Tumblr FeedTests-checkManifestLockResult.txt",
 			);
@@ -369,15 +360,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Tumblr FeedUITests-checkManifestLockResult.txt",
 			);
@@ -394,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F14F1C21378F0F0099E456 /* PhotosViewController.swift in Sources */,
+				5269CB2721421163005432DB /* PhotoCel.swift in Sources */,
 				52B232FF21378E5800AF790A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

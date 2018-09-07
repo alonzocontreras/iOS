@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PhotosViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     var posts: [[String: Any]] = []
@@ -14,6 +15,8 @@ class PhotosViewController: UIViewController , UITableViewDelegate, UITableViewD
     @IBOutlet var UITableView: UIView!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var postImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,6 @@ class PhotosViewController: UIViewController , UITableViewDelegate, UITableViewD
                 print(error.localizedDescription)
             } else if let data = data,
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                //print(dataDictionary)
                 
                 let responseDictionary = dataDictionary["response"] as! [String: Any]
                 self.posts = responseDictionary["posts"] as! [[String: Any]]
@@ -44,16 +46,30 @@ class PhotosViewController: UIViewController , UITableViewDelegate, UITableViewD
                 
             }
         }
+        self.tableView.reloadData()
         task.resume()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 5
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCel", for: indexPath) as! PhotoCel
         cell.textLabel?.text = "This is row \(indexPath.row)"
+        
+        let post = posts[indexPath.row]
+        
+        if let photos = post["photos"] as? [[String: Any]]{
+            let photo = photos[0]
+            
+            let originalSize = photo["original_size"] as! [String: Any]
+            
+            let urlString = originalSize["url"] as! String
+            
+            let url = URL(string: urlString)
+            
+        }
         
         return cell
     }

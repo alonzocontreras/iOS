@@ -69,6 +69,8 @@ class PhotosViewController: UIViewController , UITableViewDelegate, UITableViewD
             
             let url = URL(string: urlString)
             
+            cell.imageView?.af_setImage(withURL: url!)
+
         }
         
         return cell

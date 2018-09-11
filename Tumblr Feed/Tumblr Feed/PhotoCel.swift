@@ -9,7 +9,8 @@
 import UIKit
 
 class PhotoCel: UITableViewCell {
-
+    @IBOutlet weak var postsImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,12 +20,6 @@ class PhotoCel: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCel") as! PhotoCel
-        
-        return cell
     }
 
 }

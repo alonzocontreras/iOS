@@ -9,22 +9,24 @@
 import UIKit
 import AlamofireImage
 
-class PhotosViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+class PhotoViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     var posts: [[String: Any]] = []
-
     
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchImages()
 
+        
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.rowHeight = 300
-        
-    }
+        tableView.rowHeight = 160
+        fetchImages()
 
+    }
+    
     func fetchImages(){
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
         
@@ -40,9 +42,12 @@ class PhotosViewController: UIViewController , UITableViewDelegate, UITableViewD
                 let responseDictionary = dataDictionary["response"] as! [String: Any]
                 self.posts = responseDictionary["posts"] as! [[String: Any]]
                 
+                self.tableView.reloadData()
+                
+                print (responseDictionary)
+                
             }
         }
-        self.tableView.reloadData()
         task.resume()
     }
     
@@ -64,8 +69,8 @@ class PhotosViewController: UIViewController , UITableViewDelegate, UITableViewD
             
             let url = URL(string: urlString)
             
-            cell.postImageView.af_setImage(withURL: url!)
-
+            cell.postsImageView.af_setImage(withURL: url!)
+            
         }
         
         return cell
